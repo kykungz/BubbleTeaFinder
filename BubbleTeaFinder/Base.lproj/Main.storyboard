@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6cp-dm-Ca0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="13F-Ay-32g">
+            <objects>
+                <navigationController id="6cp-dm-Ca0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AST-xz-ktw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e5Z-y7-es4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSg-2T-N7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="-699"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BubbleTeaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-6a-fHI" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYC-8l-uBv">
+                                <rect key="frame" x="16" y="64" width="272" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="8Lf-M2-Wfw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Get Me Some Bubble Tea"/>
+                                <connections>
+                                    <action selector="findBubbleTea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yyk-k8-vGZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LYC-8l-uBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HT9-rg-cOF"/>
+                            <constraint firstAttribute="trailing" secondItem="ZPA-6a-fHI" secondAttribute="trailing" id="Mr5-1y-QiV"/>
+                            <constraint firstAttribute="bottom" secondItem="ZPA-6a-fHI" secondAttribute="bottom" id="WL4-D4-btV"/>
+                            <constraint firstItem="ZPA-6a-fHI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YwD-0h-KnB"/>
+                            <constraint firstItem="ZPA-6a-fHI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tVY-MG-4jE"/>
+                            <constraint firstItem="LYC-8l-uBv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vQr-Ej-hqz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jSE-hd-iSB"/>
+                    <connections>
+                        <outlet property="mapView" destination="ZPA-6a-fHI" id="Tez-QK-K5S"/>
+                        <segue destination="nBe-J0-bZ4" kind="show" identifier="showVenueDetail" id="hA8-hU-0WT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Venue Detail View Controller-->
+        <scene sceneID="bmw-Tm-bgn">
+            <objects>
+                <viewController id="nBe-J0-bZ4" customClass="VenueDetailViewController" customModule="BubbleTeaFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lew-xp-gvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b9n-GU-ug0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="281.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b9n-GU-ug0" secondAttribute="height" multiplier="4:3" id="FKT-MH-qVT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPN-Nj-dpK">
+                                <rect key="frame" x="16" y="361.5" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQT-qg-ptl">
+                                <rect key="frame" x="317" y="368" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WsE-B6-vMX" firstAttribute="trailing" secondItem="YQT-qg-ptl" secondAttribute="trailing" constant="16" id="5Pc-5T-4Du"/>
+                            <constraint firstItem="ZPN-Nj-dpK" firstAttribute="top" secondItem="b9n-GU-ug0" secondAttribute="bottom" constant="16" id="Aag-Lm-YC5"/>
+                            <constraint firstItem="b9n-GU-ug0" firstAttribute="top" secondItem="WsE-B6-vMX" secondAttribute="top" id="AtY-Na-vht"/>
+                            <constraint firstItem="WsE-B6-vMX" firstAttribute="trailing" secondItem="b9n-GU-ug0" secondAttribute="trailing" id="J6B-db-qNe"/>
+                            <constraint firstItem="ZPN-Nj-dpK" firstAttribute="leading" secondItem="WsE-B6-vMX" secondAttribute="leading" constant="16" id="lI6-Gn-1WG"/>
+                            <constraint firstItem="b9n-GU-ug0" firstAttribute="leading" secondItem="WsE-B6-vMX" secondAttribute="leading" id="uLJ-3u-Xcs"/>
+                            <constraint firstItem="YQT-qg-ptl" firstAttribute="top" secondItem="b9n-GU-ug0" secondAttribute="bottom" constant="22.5" id="xEf-L9-w2h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WsE-B6-vMX"/>
+                    </view>
+                    <connections>
+                        <outlet property="venueDistance" destination="YQT-qg-ptl" id="5tM-OM-VGB"/>
+                        <outlet property="venueImage" destination="b9n-GU-ug0" id="n7B-CD-E8M"/>
+                        <outlet property="venueName" destination="ZPN-Nj-dpK" id="6V3-h6-0ty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kh4-e7-FwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="42.728635682158924"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.8.1)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
+  - Floaty (4.1.0)
+  - GoogleMaps (3.0.2):
+    - GoogleMaps/Maps (= 3.0.2)
+  - GoogleMaps/Base (3.0.2)
+  - GoogleMaps/Maps (3.0.2):
+    - GoogleMaps/Base
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage (~> 3.5)
+  - Floaty (~> 4.1.0)
+  - GoogleMaps
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Floaty
+    - GoogleMaps
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  Floaty: 1a4e213f3512cf3045ef9cb0c1ff456226d1f66a
+  GoogleMaps: 941cd655e009b4d8e42df19a3d749bc3fccec973
+
+PODFILE CHECKSUM: 5cd3caa5a7cd6a755e7cd6302c7fad9d6a7c4bdf
+
+COCOAPODS: 1.6.0

@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5189F5B4221E811B0078C667 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189F5B3221E811B0078C667 /* SearchResponse.swift */; };
+		5189F5BA221E91400078C667 /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189F5B9221E91400078C667 /* VenueDetailViewController.swift */; };
 		51D4F02A2215424800C81E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F0292215424800C81E64 /* AppDelegate.swift */; };
 		51D4F02C2215424800C81E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F02B2215424800C81E64 /* ViewController.swift */; };
 		51D4F02F2215424800C81E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D4F02D2215424800C81E64 /* Main.storyboard */; };
 		51D4F0312215424900C81E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D4F0302215424900C81E64 /* Assets.xcassets */; };
 		51D4F0342215424900C81E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D4F0322215424900C81E64 /* LaunchScreen.storyboard */; };
+		51D4F03C22155EE900C81E64 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F03B22155EE900C81E64 /* Place.swift */; };
+		7E261D61F015E6015A6CD415 /* Pods_BubbleTeaFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D4673B2170B403174696CA /* Pods_BubbleTeaFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A67F9093D6721E83B1C89DC /* Pods-BubbleTeaFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleTeaFinder.debug.xcconfig"; path = "Target Support Files/Pods-BubbleTeaFinder/Pods-BubbleTeaFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		5189F5B3221E811B0078C667 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		5189F5B9221E91400078C667 /* VenueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
 		51D4F0262215424800C81E64 /* BubbleTeaFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleTeaFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D4F0292215424800C81E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D4F02B2215424800C81E64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		51D4F0302215424900C81E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51D4F0332215424900C81E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51D4F0352215424900C81E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51D4F03B22155EE900C81E64 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		6443625732043698B11B503D /* Pods-BubbleTeaFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleTeaFinder.release.xcconfig"; path = "Target Support Files/Pods-BubbleTeaFinder/Pods-BubbleTeaFinder.release.xcconfig"; sourceTree = "<group>"; };
+		D0D4673B2170B403174696CA /* Pods_BubbleTeaFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BubbleTeaFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E261D61F015E6015A6CD415 /* Pods_BubbleTeaFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BCF1F1DC9355761F57523A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0D4673B2170B403174696CA /* Pods_BubbleTeaFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EE29FE38B07096230595A03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A67F9093D6721E83B1C89DC /* Pods-BubbleTeaFinder.debug.xcconfig */,
+				6443625732043698B11B503D /* Pods-BubbleTeaFinder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5189F5B2221E80BB0078C667 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5189F5B3221E811B0078C667 /* SearchResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		51D4F01D2215424800C81E64 = {
 			isa = PBXGroup;
 			children = (
 				51D4F0282215424800C81E64 /* BubbleTeaFinder */,
 				51D4F0272215424800C81E64 /* Products */,
+				4EE29FE38B07096230595A03 /* Pods */,
+				3BCF1F1DC9355761F57523A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +92,15 @@
 		51D4F0282215424800C81E64 /* BubbleTeaFinder */ = {
 			isa = PBXGroup;
 			children = (
+				5189F5B2221E80BB0078C667 /* Models */,
 				51D4F0292215424800C81E64 /* AppDelegate.swift */,
 				51D4F02B2215424800C81E64 /* ViewController.swift */,
 				51D4F02D2215424800C81E64 /* Main.storyboard */,
 				51D4F0302215424900C81E64 /* Assets.xcassets */,
 				51D4F0322215424900C81E64 /* LaunchScreen.storyboard */,
 				51D4F0352215424900C81E64 /* Info.plist */,
+				51D4F03B22155EE900C81E64 /* Place.swift */,
+				5189F5B9221E91400078C667 /* VenueDetailViewController.swift */,
 			);
 			path = BubbleTeaFinder;
 			sourceTree = "<group>";
@@ -71,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51D4F0382215424900C81E64 /* Build configuration list for PBXNativeTarget "BubbleTeaFinder" */;
 			buildPhases = (
+				3CEAEAEBE158C5D6A982F443 /* [CP] Check Pods Manifest.lock */,
 				51D4F0222215424800C81E64 /* Sources */,
 				51D4F0232215424800C81E64 /* Frameworks */,
 				51D4F0242215424800C81E64 /* Resources */,
+				DDDDF098957099DB4D599BFF /* [CP] Copy Pods Resources */,
+				375AB1E35C7C529983F085D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +174,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		375AB1E35C7C529983F085D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BubbleTeaFinder/Pods-BubbleTeaFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BubbleTeaFinder/Pods-BubbleTeaFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CEAEAEBE158C5D6A982F443 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BubbleTeaFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDDDF098957099DB4D599BFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BubbleTeaFinder/Pods-BubbleTeaFinder-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BubbleTeaFinder/Pods-BubbleTeaFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51D4F0222215424800C81E64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D4F03C22155EE900C81E64 /* Place.swift in Sources */,
+				5189F5BA221E91400078C667 /* VenueDetailViewController.swift in Sources */,
 				51D4F02C2215424800C81E64 /* ViewController.swift in Sources */,
+				5189F5B4221E811B0078C667 /* SearchResponse.swift in Sources */,
 				51D4F02A2215424800C81E64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,9 +400,11 @@
 		};
 		51D4F0392215424900C81E64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A67F9093D6721E83B1C89DC /* Pods-BubbleTeaFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RT44NCJNJ3;
 				INFOPLIST_FILE = BubbleTeaFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,9 +419,11 @@
 		};
 		51D4F03A2215424900C81E64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6443625732043698B11B503D /* Pods-BubbleTeaFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RT44NCJNJ3;
 				INFOPLIST_FILE = BubbleTeaFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
